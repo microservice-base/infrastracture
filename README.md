@@ -4,7 +4,7 @@ infrastracture app of simple project
 # NAMESPACE
 ```
 kubectl create namespace namespace-microservice-base --dry-run -o yaml > namespace-microservice-base.yaml
-kubectl apply -f https://raw.githubusercontent.com/microservice-base/infrastracture/master/namespace-microservice-base.yaml
+kubectl create -f https://raw.githubusercontent.com/microservice-base/infrastracture/master/namespace-microservice-base.yaml
 kubectl delete -f https://raw.githubusercontent.com/microservice-base/infrastracture/master/namespace-microservice-base.yaml
 
 
