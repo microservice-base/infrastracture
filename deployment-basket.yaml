@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: image-basket-deployment
+  name: image-basket-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: image-basket-deployment
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: image-basket-deployment
+    spec:
+      containers:
+      - image: keramiozsoy/image-basket
+        name: image-basket
+        resources: {}
+status: {}
