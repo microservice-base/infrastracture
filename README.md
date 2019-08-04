@@ -18,7 +18,7 @@ kubectl apply -f https://raw.githubusercontent.com/microservice-base/infrastract
 
 
 
-#SERVICE
+# SERVICE
 kubectl expose deployment image-shop-deployment --type=LoadBalancer --port=8001 --dry-run -o yaml > service-shop.yaml
 kubectl apply -f https://raw.githubusercontent.com/microservice-base/infrastracture/master/service-shop.yaml
 
