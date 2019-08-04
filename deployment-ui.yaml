@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: image-ui-deployment
+  name: image-ui-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: image-ui-deployment
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: image-ui-deployment
+    spec:
+      containers:
+      - image: keramiozsoy/image-ui
+        name: image-ui
+        resources: {}
+status: {}
