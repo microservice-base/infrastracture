@@ -1,5 +1,5 @@
 # infrastracture
-infrastracture for microservice-base project
+infrastracture app of simple project
 
 # DEPLOYMENT
 
