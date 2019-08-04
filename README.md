@@ -16,6 +16,9 @@ kubectl apply -f https://raw.githubusercontent.com/microservice-base/infrastract
 kubectl create deployment image-ui-deployment --image=keramiozsoy/image-ui --dry-run -o yaml > deployment-ui.yaml
 kubectl apply -f https://raw.githubusercontent.com/microservice-base/infrastracture/master/deployment-ui.yaml
 
+kubectl create deployment image-payment-deployment --image=keramiozsoy/image-payment --dry-run -o yaml > deployment-payment.yaml
+kubectl apply -f https://raw.githubusercontent.com/microservice-base/infrastracture/master/deployment-payment.yaml
+
 
 
 ```
