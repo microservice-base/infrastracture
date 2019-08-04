@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: image-shop-deployment
+  name: image-shop-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: image-shop-deployment
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: image-shop-deployment
+    spec:
+      containers:
+      - image: keramiozsoy/image-shop
+        name: image-shop
+        resources: {}
+status: {}
