@@ -9,8 +9,6 @@ kubectl delete -f https://raw.githubusercontent.com/microservice-base/infrastrac
 ```
 
 
-
-
 # DEPLOYMENT
 
  ```
@@ -36,14 +34,18 @@ kubectl apply -f https://raw.githubusercontent.com/microservice-base/infrastract
 kubectl delete -f https://raw.githubusercontent.com/microservice-base/infrastracture/master/deployment-payment.yaml
 
 
-
 ```
 
 # SERVICE
 ```
 kubectl expose deployment image-shop-deployment --type=LoadBalancer --port=8001 --dry-run -o yaml > service-shop.yaml
 kubectl apply -f https://raw.githubusercontent.com/microservice-base/infrastracture/master/service-shop.yaml
+minikube service image-shop-deployment
 
+A = echo $(minikube ip)
+B = kubectl get service -o yaml | grep nodePort
+
+open http://A/B/shop/swagger-ui.html
 ```
 
 
