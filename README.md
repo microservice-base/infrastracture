@@ -58,6 +58,22 @@ B = kubectl get service -o yaml | grep nodePort
 open http://A/B/basket/
 
 
+**
+
+kubectl expose deployment image-account-deployment --type=LoadBalancer --port=8003 --dry-run -o yaml > service-account.yml
+kubectl apply -f https://raw.githubusercontent.com/microservice-base/infrastracture/master/service-account.yaml
+minikube service image-account-deployment
+
+A = echo $(minikube ip)
+B = kubectl get service -o yaml | grep nodePort
+
+open http://A/B/account/
+
+
+
+
+
+
 ```
 
 
