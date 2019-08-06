@@ -46,6 +46,19 @@ A = echo $(minikube ip)
 B = kubectl get service -o yaml | grep nodePort
 
 open http://A/B/shop/swagger-ui.html
+
+**
+
+kubectl expose deployment image-basket-deployment --type=LoadBalancer --port=8002 --dry-run -o yaml > service-basket.yml
+kubectl apply -f https://raw.githubusercontent.com/microservice-base/infrastracture/master/service-basket.yaml
+minikube service image-basket-deployment
+
+A = echo $(minikube ip)
+B = kubectl get service -o yaml | grep nodePort
+
+open http://A/B/basket/
+
+
 ```
 
 
