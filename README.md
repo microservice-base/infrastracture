@@ -67,10 +67,7 @@ minikube service image-account-deployment
 A = echo $(minikube ip)
 B = kubectl get service -o yaml | grep nodePort
 
-open http://A/B/account/
-
-
-
+open http://A/B/account/ (doesnt work)
 
 
 
