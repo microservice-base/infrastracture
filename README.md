@@ -48,7 +48,7 @@ open http://A/B/shop/swagger-ui.html
 
 **
 
-kubectl expose deployment image-basket-deployment --type=LoadBalancer --port=8002 --dry-run -o yaml > service-basket.yml
+kubectl expose deployment image-basket-deployment --type=LoadBalancer --port=8002 --dry-run -o yaml > service-basket.yaml
 kubectl apply -f https://raw.githubusercontent.com/microservice-base/infrastracture/master/service-basket.yaml
 minikube service image-basket-deployment
 
@@ -60,7 +60,7 @@ open http://A/B/basket/
 
 **
 
-kubectl expose deployment image-account-deployment --type=LoadBalancer --port=8003 --dry-run -o yaml > service-account.yml
+kubectl expose deployment image-account-deployment --type=LoadBalancer --port=8003 --dry-run -o yaml > service-account.yaml
 kubectl apply -f https://raw.githubusercontent.com/microservice-base/infrastracture/master/service-account.yaml
 minikube service image-account-deployment
 
