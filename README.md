@@ -67,7 +67,7 @@ minikube service image-account-deployment
 A = echo $(minikube ip)
 B = kubectl get service -o yaml | grep nodePort
 
-open http://A/B/account/ (doesnt work)
+open http://A/B/account/ (doesnt work. i will change ports in docker)
 
 
 
@@ -91,7 +91,7 @@ minikube service image-ui-deployment
 A = echo $(minikube ip)
 B = kubectl get service -o yaml | grep nodePort
 
-open http://A/B/ui/ 
+open http://A/B/ui/ (does not work. i will change in docker port. this app context will change as /ui)
 
 
 ```
