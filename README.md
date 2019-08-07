@@ -71,6 +71,18 @@ open http://A/B/account/ (doesnt work)
 
 
 
+**
+
+kubectl expose deployment image-payment-deployment --type=LoadBalancer --port=8004 --dry-run -o yaml > service-payment.yaml
+kubectl apply -f https://raw.githubusercontent.com/microservice-base/infrastracture/master/service-payment.yaml
+minikube service image-payment-deployment
+
+A = echo $(minikube ip)
+B = kubectl get service -o yaml | grep nodePort
+
+open http://A/B/payment/ 
+
+
 ```
 
 
