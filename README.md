@@ -90,7 +90,7 @@ minikube service image-ui-deployment
 A = echo $(minikube ip)
 B = kubectl get service -o yaml | grep nodePort
 
-open http://A/B/ui/ (does not work. i will change in docker port. this app context will change as /ui)
+open http://A/B/ui/ (this app context will change as /ui)
 
 
 ```
