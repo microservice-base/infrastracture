@@ -83,7 +83,7 @@ open http://A/B/payment/
 
 **
 
-kubectl expose deployment image-ui-deployment --type=LoadBalancer --port=8005 --dry-run -o yaml > service-ui.yaml
+kubectl expose deployment image-ui-deployment --type=LoadBalancer --port=8005 --target-port=3000 --dry-run -o yaml > service-ui.yaml
 kubectl apply -f https://raw.githubusercontent.com/microservice-base/infrastracture/master/service-ui.yaml
 minikube service image-ui-deployment
 
