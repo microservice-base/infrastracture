@@ -60,7 +60,7 @@ open http://A/B/basket/
 
 **
 
-kubectl expose deployment image-account-deployment --type=LoadBalancer --port=8003 --dry-run -o yaml > service-account.yaml
+kubectl expose deployment image-account-deployment --type=LoadBalancer --port=8003 --target-port=80 --dry-run -o yaml > service-account.yaml
 kubectl apply -f https://raw.githubusercontent.com/microservice-base/infrastracture/master/service-account.yaml
 minikube service image-account-deployment
 
