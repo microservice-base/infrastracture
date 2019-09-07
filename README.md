@@ -37,7 +37,7 @@ kubectl delete -f https://raw.githubusercontent.com/microservice-base/infrastrac
 
 # SERVICE
 ```
-kubectl expose deployment image-shop-deployment --type=LoadBalancer --port=8001 --dry-run -o yaml > service-shop.yaml
+kubectl expose deployment image-shop-deployment --type=LoadBalancer --port=8001 --target-port=8001 --dry-run -o yaml > service-shop.yaml
 kubectl apply -f https://raw.githubusercontent.com/microservice-base/infrastracture/master/service-shop.yaml
 minikube service image-shop-deployment
 
@@ -48,7 +48,7 @@ open http://A/B/shop/swagger-ui.html
 
 **
 
-kubectl expose deployment image-basket-deployment --type=LoadBalancer --port=8002 --dry-run -o yaml > service-basket.yaml
+kubectl expose deployment image-basket-deployment --type=LoadBalancer --port=8002 --target-port=8002 --dry-run -o yaml > service-basket.yaml
 kubectl apply -f https://raw.githubusercontent.com/microservice-base/infrastracture/master/service-basket.yaml
 minikube service image-basket-deployment
 
@@ -72,7 +72,7 @@ open http://A/B/account/
 
 **
 
-kubectl expose deployment image-payment-deployment --type=LoadBalancer --port=8004 --dry-run -o yaml > service-payment.yaml
+kubectl expose deployment image-payment-deployment --type=LoadBalancer --port=8004 --target-port=8004 --dry-run -o yaml > service-payment.yaml
 kubectl apply -f https://raw.githubusercontent.com/microservice-base/infrastracture/master/service-payment.yaml
 minikube service image-payment-deployment
 
