@@ -40,6 +40,7 @@ kubectl delete -f https://raw.githubusercontent.com/microservice-base/infrastrac
 ```
 kubectl expose deployment image-shop-deployment --type=LoadBalancer --port=8001 --target-port=8001 --dry-run -o yaml > service-shop.yaml
 kubectl apply -f https://raw.githubusercontent.com/microservice-base/infrastracture/master/service-shop.yaml
+kubectl delete -f https://raw.githubusercontent.com/microservice-base/infrastracture/master/service-shop.yaml
 minikube service image-shop-deployment
 
 A = echo $(minikube ip)
@@ -51,6 +52,7 @@ open http://A/B/shop/swagger-ui.html
 
 kubectl expose deployment image-basket-deployment --type=LoadBalancer --port=8002 --target-port=8002 --dry-run -o yaml > service-basket.yaml
 kubectl apply -f https://raw.githubusercontent.com/microservice-base/infrastracture/master/service-basket.yaml
+kubectl delete -f https://raw.githubusercontent.com/microservice-base/infrastracture/master/service-basket.yaml
 minikube service image-basket-deployment
 
 A = echo $(minikube ip)
@@ -63,6 +65,7 @@ open http://A/B/basket/
 
 kubectl expose deployment image-account-deployment --type=LoadBalancer --port=8003 --target-port=80 --dry-run -o yaml > service-account.yaml
 kubectl apply -f https://raw.githubusercontent.com/microservice-base/infrastracture/master/service-account.yaml
+kubectl delete -f https://raw.githubusercontent.com/microservice-base/infrastracture/master/service-account.yaml
 minikube service image-account-deployment
 
 A = echo $(minikube ip)
@@ -75,6 +78,7 @@ open http://A/B/account/
 
 kubectl expose deployment image-payment-deployment --type=LoadBalancer --port=8004 --target-port=8004 --dry-run -o yaml > service-payment.yaml
 kubectl apply -f https://raw.githubusercontent.com/microservice-base/infrastracture/master/service-payment.yaml
+kubectl delete -f https://raw.githubusercontent.com/microservice-base/infrastracture/master/service-payment.yaml
 minikube service image-payment-deployment
 
 A = echo $(minikube ip)
@@ -86,6 +90,7 @@ open http://A/B/payment/
 
 kubectl expose deployment image-ui-deployment --type=LoadBalancer --port=8005 --target-port=3000 --dry-run -o yaml > service-ui.yaml
 kubectl apply -f https://raw.githubusercontent.com/microservice-base/infrastracture/master/service-ui.yaml
+kubectl delete -f https://raw.githubusercontent.com/microservice-base/infrastracture/master/service-ui.yaml
 minikube service image-ui-deployment
 
 A = echo $(minikube ip)
