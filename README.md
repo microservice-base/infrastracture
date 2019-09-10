@@ -48,6 +48,10 @@ B = kubectl get service -o yaml | grep nodePort
 
 open http://A/B/shop/swagger-ui.html
 
+OR
+
+minikube service image-ui-deployment --url
+
 **
 
 kubectl expose deployment image-basket-deployment --type=LoadBalancer --port=8002 --target-port=8002 --dry-run -o yaml > service-basket.yaml
@@ -60,6 +64,9 @@ B = kubectl get service -o yaml | grep nodePort
 
 open http://A/B/basket/
 
+or 
+
+minikube service image-basket-deployment --url
 
 **
 
@@ -73,6 +80,9 @@ B = kubectl get service -o yaml | grep nodePort
 
 open http://A/B/account/
 
+or
+
+minikube service image-account-deployment --url
 
 **
 
@@ -86,6 +96,10 @@ B = kubectl get service -o yaml | grep nodePort
 
 open http://A/B/payment/ 
 
+or 
+
+minikube service image-payment-deployment --url
+
 **
 
 kubectl expose deployment image-ui-deployment --type=LoadBalancer --port=8005 --target-port=3000 --dry-run -o yaml > service-ui.yaml
@@ -98,6 +112,9 @@ B = kubectl get service -o yaml | grep nodePort
 
 open http://A/B/ui/ (this app context will change as /ui)
 
+or
+
+minikube service image-ui-deployment --url
 
 ```
 
