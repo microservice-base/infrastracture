@@ -1,6 +1,6 @@
 # infrastracture
 infrastracture app of simple project
-https://microservice-base.github.io
+- https://microservice-base.github.io
 
 # CREATE NAMESPACE
 ```
