@@ -50,7 +50,7 @@ open http://A/B/shop/swagger-ui.html
 
 OR
 
-minikube service image-ui-deployment --url
+open $(minikube service image-ui-deployment --url)
 
 **
 
@@ -66,7 +66,8 @@ open http://A/B/basket/
 
 or 
 
-minikube service image-basket-deployment --url
+open $(minikube service image-basket-deployment --url)
+
 
 **
 
@@ -82,7 +83,7 @@ open http://A/B/account/
 
 or
 
-minikube service image-account-deployment --url
+open $(minikube service image-account-deployment --url)
 
 **
 
@@ -98,7 +99,7 @@ open http://A/B/payment/
 
 or 
 
-minikube service image-payment-deployment --url
+open $(minikube service image-payment-deployment --url)
 
 **
 
@@ -114,7 +115,7 @@ open http://A/B/ui/ (this app context will change as /ui)
 
 or
 
-minikube service image-ui-deployment --url
+open $(minikube service image-ui-deployment --url)
 
 ```
 
