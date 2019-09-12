@@ -12,6 +12,14 @@ kubectl delete -f https://raw.githubusercontent.com/microservice-base/infrastrac
 # CHANGE NAMESPACE
 ```
 kubectl config set-context --current --namespace=namespace-microservice-base
+
+or
+
+vi .kube/config 
+
+namespace : namespace-microservice-base
+
+change below line and save :)
 ```
 
 # DEPLOYMENT
