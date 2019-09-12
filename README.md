@@ -9,6 +9,10 @@ kubectl create -f https://raw.githubusercontent.com/microservice-base/infrastrac
 kubectl delete -f https://raw.githubusercontent.com/microservice-base/infrastracture/master/namespace-microservice-base.yaml
 ```
 
+# CHANGE NAMESPACE
+```
+kubectl config set-context --current --namespace=namespace-microservice-base
+```
 
 # DEPLOYMENT
 
