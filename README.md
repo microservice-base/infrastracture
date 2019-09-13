@@ -131,5 +131,4 @@ open $(minikube service image-ui-deployment --url)
 
 ```
 
-
-
+# INGRESS
