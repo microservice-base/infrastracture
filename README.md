@@ -63,7 +63,7 @@ open http://A/B/shop/swagger-ui.html
 
 OR
 
-open $(minikube service image-ui-deployment --url)
+open $(minikube service image-shop-deployment --url)
 
 **
 
