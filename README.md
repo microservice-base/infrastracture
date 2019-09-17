@@ -54,32 +54,33 @@ kubectl delete -f https://raw.githubusercontent.com/microservice-base/infrastrac
 kubectl expose deployment image-shop-deployment --type=LoadBalancer --port=8001 --target-port=8001 --dry-run -o yaml > service-shop.yaml
 kubectl apply -f https://raw.githubusercontent.com/microservice-base/infrastracture/master/service-shop.yaml
 kubectl delete -f https://raw.githubusercontent.com/microservice-base/infrastracture/master/service-shop.yaml
-minikube service image-shop-deployment
-
-A = echo $(minikube ip)
-B = kubectl get service -o yaml | grep nodePort
-
-open http://A/B/shop/swagger-ui.html
-
-OR
 
 open $(minikube service image-shop-deployment --url)
+
+OR 
+
+minikube service image-shop-deployment
+A = echo $(minikube ip)
+B = kubectl get service -o yaml | grep nodePort
+open http://A/B/swagger-ui.html
 
 **
 
 kubectl expose deployment image-basket-deployment --type=LoadBalancer --port=8002 --target-port=8002 --dry-run -o yaml > service-basket.yaml
 kubectl apply -f https://raw.githubusercontent.com/microservice-base/infrastracture/master/service-basket.yaml
 kubectl delete -f https://raw.githubusercontent.com/microservice-base/infrastracture/master/service-basket.yaml
-minikube service image-basket-deployment
 
+open $(minikube service image-basket-deployment --url)
+
+OR
+
+minikube service image-basket-deployment
 A = echo $(minikube ip)
 B = kubectl get service -o yaml | grep nodePort
 
-open http://A/B/basket/
+open http://A/B/
+ 
 
-or 
-
-open $(minikube service image-basket-deployment --url)
 
 
 **
@@ -87,48 +88,51 @@ open $(minikube service image-basket-deployment --url)
 kubectl expose deployment image-account-deployment --type=LoadBalancer --port=8003 --target-port=80 --dry-run -o yaml > service-account.yaml
 kubectl apply -f https://raw.githubusercontent.com/microservice-base/infrastracture/master/service-account.yaml
 kubectl delete -f https://raw.githubusercontent.com/microservice-base/infrastracture/master/service-account.yaml
-minikube service image-account-deployment
-
-A = echo $(minikube ip)
-B = kubectl get service -o yaml | grep nodePort
-
-open http://A/B/account/
-
-or
 
 open $(minikube service image-account-deployment --url)
+
+OR
+
+minikube service image-account-deployment
+A = echo $(minikube ip)
+B = kubectl get service -o yaml | grep nodePort
+open http://A/B/
 
 **
 
 kubectl expose deployment image-payment-deployment --type=LoadBalancer --port=8004 --target-port=8004 --dry-run -o yaml > service-payment.yaml
 kubectl apply -f https://raw.githubusercontent.com/microservice-base/infrastracture/master/service-payment.yaml
 kubectl delete -f https://raw.githubusercontent.com/microservice-base/infrastracture/master/service-payment.yaml
-minikube service image-payment-deployment
 
-A = echo $(minikube ip)
-B = kubectl get service -o yaml | grep nodePort
-
-open http://A/B/payment/ 
-
-or 
 
 open $(minikube service image-payment-deployment --url)
+
+OR
+
+minikube service image-payment-deployment
+A = echo $(minikube ip)
+B = kubectl get service -o yaml | grep nodePort
+open http://A/B/
+
 
 **
 
 kubectl expose deployment image-ui-deployment --type=LoadBalancer --port=8005 --target-port=3000 --dry-run -o yaml > service-ui.yaml
 kubectl apply -f https://raw.githubusercontent.com/microservice-base/infrastracture/master/service-ui.yaml
 kubectl delete -f https://raw.githubusercontent.com/microservice-base/infrastracture/master/service-ui.yaml
-minikube service image-ui-deployment
 
+
+open $(minikube service image-ui-deployment --url)
+
+OR
+ 
+minikube service image-ui-deployment
 A = echo $(minikube ip)
 B = kubectl get service -o yaml | grep nodePort
-
-open http://A/B/ui/ (this app context will change as /ui)
+open http://A/B/
 
 or
 
-open $(minikube service image-ui-deployment --url)
 
 ```
 
