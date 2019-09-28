@@ -60,9 +60,7 @@ open $(minikube service image-shop-deployment --url)
 OR 
 
 minikube service image-shop-deployment
-A = echo $(minikube ip)
-B = kubectl get service -o yaml | grep nodePort
-open http://A/B/swagger-ui.html
+
 
 **
 
@@ -75,10 +73,7 @@ open $(minikube service image-basket-deployment --url)
 OR
 
 minikube service image-basket-deployment
-A = echo $(minikube ip)
-B = kubectl get service -o yaml | grep nodePort
 
-open http://A/B/
  
 
 
@@ -94,9 +89,6 @@ open $(minikube service image-account-deployment --url)
 OR
 
 minikube service image-account-deployment
-A = echo $(minikube ip)
-B = kubectl get service -o yaml | grep nodePort
-open http://A/B/
 
 **
 
@@ -110,9 +102,7 @@ open $(minikube service image-payment-deployment --url)
 OR
 
 minikube service image-payment-deployment
-A = echo $(minikube ip)
-B = kubectl get service -o yaml | grep nodePort
-open http://A/B/
+
 
 
 **
@@ -127,11 +117,6 @@ open $(minikube service image-ui-deployment --url)
 OR
  
 minikube service image-ui-deployment
-A = echo $(minikube ip)
-B = kubectl get service -o yaml | grep nodePort
-open http://A/B/
-
-or
 
 
 ```
