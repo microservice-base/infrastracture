@@ -1,5 +1,6 @@
 # infrastracture
-infrastracture app of simple project
+
+Projenin altyapısı ve kurulumları yapilırken kullanılan projedir
 
 https://microservice-base.github.io
 
