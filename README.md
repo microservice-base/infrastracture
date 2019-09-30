@@ -1,8 +1,6 @@
 # infrastracture
 
-Projenin altyapısı ve kurulumları yapilırken kullanılan projedir
-
-https://microservice-base.github.io
+Kubernetes altyapısı ile projelerin çalıştırılmasını sağlayn projedir.
 
 # CREATE NAMESPACE
 ```
