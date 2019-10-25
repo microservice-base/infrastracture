@@ -120,4 +120,4 @@ minikube service image-ui-deployment
 
 ```
 
-# INGRESS CONTROLLER
+# INGRESS CONTROLLER 
