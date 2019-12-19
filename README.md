@@ -1,6 +1,6 @@
 # infrastracture
 
-Kubernetes altyapısı ile projelerin çalıştırılmasını sağlayn projedir.
+Kubernetes altyapısı kullanarak projelerin çalıştırılmasını sağlayan projedir.
 
 # CREATE NAMESPACE
 ```
