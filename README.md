@@ -19,7 +19,7 @@ vi .kube/config
 
 namespace : namespace-microservice-base
 
-change like above and save :)
+ save :)
 ```
 
 # DEPLOYMENT
